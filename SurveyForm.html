@@ -1,0 +1,128 @@
+<style>
+body {
+  text-align: center;
+  background-color: #ddded9;
+  font-family: 'Arial', Helvetica;
+  min-width: 320px;
+}
+#form-outer {
+  background-color: white;
+  outline: 2px solid black;
+  margin: 0 auto;
+  border-radius: 4px;
+  width: 80%;
+  max-width: 900px;
+  padding: 10px;
+  padding-top: 20px;
+}
+
+.labels {
+  display: inline-block;
+  text-align: right;
+  width: 30%;
+  padding: 5px;
+  vertical-align: top;
+  margin-top: 10px;
+}
+
+.rightTab {
+  display: inline-block;
+  text-align: left;
+  width: 48%;
+  vertical-align: middle;
+}
+
+.input-field {
+  height: 20px;
+  width: 280px;
+  padding: 5px;
+  margin: 10px;
+  border: 2px solid #c0c0c0;
+  border-radius: 2px;
+}
+#number {
+  width: 70px;
+}
+.dropdown {
+  height: 30px;
+  width: 130px;
+  padding: 5px;
+  margin: 10px;
+  margin-top: 10px;
+  border: 2px solid #c0c0c0;
+  border-radius: 2px;
+}
+
+.radio, .checkbox {
+  position: relative;
+  left: -43px;
+  margin-left: 10px;
+  display: block;
+  padding-bottom: 10px;
+}
+</style>
+<h1 id="title">Project Request Form</h1>
+<div id="form-outer">
+   <p id="description">Let's get some more information:</p>
+<form id="survey-form">
+   <div class="labels">
+    <label id="name-label" for="name">Name:</label>
+    </div>
+     <div class="rightTab">
+      <input type="text" id="name" for='name' Placeholder="Enter name here" required class="input-field">
+    </div>
+  <div class="labels">
+   <label id="email-label" for="email">Email:</label>
+    </div>
+   <div class="rightTab">
+     <input type="email" id="email" placeholder="Enter email here" required class="input-field">
+    </div>
+  <div class="labels">
+    <label id="number-label" for="number-of-days">How many days to complete?</label>
+    </div>
+    <div class="rightTab">
+      <input type="number" id="number" min="1" max="30" placeholder="# of days"required class="input-field">
+    </div>
+    <div class="labels">
+      <label for="type">Type of project:</label>
+    </div>
+    <div class="rightTab">
+      <select id="dropdown" name="ProjectType" class="dropdown">
+        <option disabled value>Select one</option>
+        <option value>Professional</option>
+        <option value>Personal</option>
+      </select>
+        </div>
+      <div class="rowTab">
+      <div class="labels">
+        <label for="userRating">Will this project require front-end, back-end, or knowledge of both?</label>
+      </div>
+      <div class="rightTab">
+        <ul style="list-style: none;">
+          <li class="radio"><label>Front-End<input name="radio-buttons" value="1"  type="radio" class="userRatings" ></label></li>
+          <li class="radio"><label>Back-End<input name="radio-buttons" value="2"  type="radio" class="userRatings" ></label></li>
+          <li class="radio"><label>Both<input name="radio-buttons" value="3"  type="radio" class="userRatings" ></label></li>
+        </ul>
+      </div>
+    </div>
+  <div class="labels">
+        <label for="preferences">While the services are free, what perks could you offer?<br>(Check all that apply): </label>
+      </div>
+      <div class="rightTab">
+        <ul id="preferences" style="list-style: none;">
+          <li class="checkbox"><label><input value="1" type="checkbox">Healthy Snacks</label></li>
+          <li class="checkbox"><input value="2" type="checkbox">Paid Lunches</li>
+          <li class="checkbox"><label><input value="3" type="checkbox">Gym Membership Reimbursement</label></li>
+          <li class="checkbox"><label><input value="4" type="checkbox">Ping Pong Table</label></li>
+          <li class="checkbox"><label><input value="5" type="checkbox">Mentor Services</label></li>
+        </ul>
+      </div>
+  <div class="labels">
+       <label for="comments">Feel free to write anything you would like to add here:</label>
+     </div>
+      <div class="rightTab">
+        <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="Enter text here..."></textarea>
+        </div>
+  <button id="submit" type="submit">Submit</button>
+  </form>
+</div>
